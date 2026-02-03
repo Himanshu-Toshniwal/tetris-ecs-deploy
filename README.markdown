@@ -5,7 +5,7 @@ Run a classic Tetris game using Docker.
 ### 🚀 Run
 ```bash
 docker run -d -p 80:80 uzyexe/tetris:latest
-
+```
 
 ## Tetris ECS Deployment
 
