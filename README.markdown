@@ -146,7 +146,7 @@ If the application is inaccessible:
 ## Author
 
 - **Himanshu Toshniwal**
-  - LinkedIn: [pravesh-sudha](https://www.linkedin.com/in/himanshu-toshniwal-0156502b8)
+  - LinkedIn: [Himanshu Toshniwal](https://www.linkedin.com/in/himanshu-toshniwal-0156502b8)
   
 ## License
 
