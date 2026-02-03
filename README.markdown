@@ -29,7 +29,7 @@ tetris-ecs-deploy/
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/Pravesh-Sudha/tetris-ecs-deploy.git
+   git clone https://github.com/Himanshu-Toshniwal/tetris-ecs-deploy.git
    cd tetris-ecs-deploy
    ```
 
@@ -41,8 +41,8 @@ tetris-ecs-deploy/
      ```
 
 3. **Configure AWS CLI**:
-   - Run `aws configure` to set your AWS Access Key, Secret Key, and region (e.g., `us-east-1`).
-   - Ensure the region matches the one in `main.tf` (`us-east-1` by default).
+   - Run `aws configure` to set your AWS Access Key, Secret Key, and region (e.g., `ap-south-1`).
+   - Ensure the region matches the one in `main.tf` (`ap-south-1` by default).
 
 ## Deployment Steps
 
@@ -66,13 +66,13 @@ tetris-ecs-deploy/
    After deployment, use the following AWS CLI commands to get the public IP of the ECS task:
    ```bash
    # List running tasks
-   aws ecs list-tasks --cluster tetris-cluster --service-name tetris-service --region us-east-1
+   aws ecs list-tasks --cluster tetris-cluster --service-name tetris-service --region ap-south-1
 
    # Describe task to get network interface ID (replace <task-arn> with the ARN from the previous command)
-   aws ecs describe-tasks --cluster tetris-cluster --tasks <task-arn> --region us-east-1
+   aws ecs describe-tasks --cluster tetris-cluster --tasks <task-arn> --region ap-south-1
 
    # Get public IP (replace <eni-id> with the networkInterfaceId from the previous command)
-   aws ec2 describe-network-interfaces --network-interface-ids <eni-id> --region us-east-1 --query 'NetworkInterfaces[0].Association.PublicIp' --output text
+   aws ec2 describe-network-interfaces --network-interface-ids <eni-id> --region ap-south-1 --query 'NetworkInterfaces[0].Association.PublicIp' --output text
    ```
 
    Example output:
@@ -96,7 +96,7 @@ To simplify retrieving the public IP, use this bash script:
 
 ```bash
 #!/bin/bash
-REGION="us-east-1"
+REGION="ap-south-1"
 CLUSTER="tetris-cluster"
 SERVICE="tetris-service"
 
@@ -145,11 +145,9 @@ If the application is inaccessible:
 
 ## Author
 
-- **Pravesh Sudha**
-  - LinkedIn: [pravesh-sudha](https://www.linkedin.com/in/pravesh-sudha/)
-  - Twitter/X: [@praveshstwt](https://x.com/praveshstwt)
-  - YouTube: [@pravesh-sudha](https://www.youtube.com/@pravesh-sudha)
-
+- **Himanshu Toshniwal**
+  - LinkedIn: [pravesh-sudha](https://www.linkedin.com/in/himanshu-toshniwal-0156502b8)
+  
 ## License
 
 This project is licensed under the MIT License.
