@@ -1,5 +1,5 @@
 #!/bin/bash
-REGION="us-east-1"
+REGION="ap-south-1"
 CLUSTER="tetris-cluster"
 SERVICE="tetris-service"
 
