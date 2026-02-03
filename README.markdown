@@ -1,4 +1,13 @@
-# Tetris ECS Deployment
+## 🧱 Tetris Game (Docker)
+
+Run a classic Tetris game using Docker.
+
+### 🚀 Run
+```bash
+docker run -d -p 80:80 uzyexe/tetris:latest
+
+
+## Tetris ECS Deployment
 
 This project deploys a web-based Tetris game on AWS ECS (Elastic Container Service) using Fargate. The application runs in a Docker container (`uzyexe/tetris:latest`) and is accessible via a public IP address. The infrastructure is provisioned using Terraform, leveraging the default VPC and subnets, with a custom security group for HTTP access and CloudWatch for logging.
 
